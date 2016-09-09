@@ -1,0 +1,82 @@
+.modal-footer p {
+	display: inline-block;
+}
+
+.modal-body p small {
+	color: #777;
+}
+
+.modal-body button {
+	margin-bottom: 0px;
+}
+
+.modal-body p {
+	margin-top: 10px;
+	margin-bottom: 0px;
+	color: #404040;
+}
+
+.modal-header {
+	border: none;
+}
+
+.modal-footer {
+	position: absolute;
+    bottom: 0; 
+    width: 100%;
+}
+
+.modal-footer p {
+	color: #777;
+	font-size: 1.2em;
+}
+
+.modal-content {
+		height:	80%;
+		border-radius: 3px;
+	}
+
+	.modal-dialog	{
+		height:	80%;
+		height:	80%;
+	}
+
+
+@media(min-width: 767px) {
+	.modal-content {
+		height:	400px;
+	}
+
+	.modal-dialog	{
+		height: 400px;
+		width: 400px;
+	}
+
+}
+
+.facebook-button {
+	text-align: center;
+	margin: 30px 0px 20px 0px;
+	height: 50px;
+	width: 100%;
+	padding: 12.5px; 
+	background: linear-gradient(#4c69ba, #3b55a0);
+	border-radius: 1px;
+}
+
+.bottom-align-text {
+  position: absolute;
+  bottom: 15px;
+}
+
+.modal-body	{
+	height: 286px;
+}
+
+.modal {
+display: block;
+}
+
+.white, .white a {
+  color: #fff;
+}

@@ -1,0 +1,51 @@
+ <div class="logo">
+    	<a href="/"><img ng-src="images/logo_alone_svg.png"/></a>	
+ </div>
+
+<section ng-hide="currentUser" class="card register">
+
+  <form name="registerForm"
+    novalidate>
+
+    <div class="textintro">
+      <p class="title">Sign in to Sharemate</p>
+      <p>Find mennesker og del viden</p>
+    </div>
+
+    <div class="facebook">
+   		<fb:login-button data-auto-logout-link="true" scope="public_profile,email" size="large"></fb:login-butto> 
+   		Continue with facebook
+   	</div>
+
+   	<p>We won't post anything to facebook</p>
+
+  </form>
+</section>
+
+<section ng-show="currentUser" class="card tags">
+
+  <form name="tagsForm" ng-submit="submit()"
+    novalidate>
+
+    <fieldset>
+   		
+   		<input class="inline" type="text" name="ingredients" ng-model="text"  placeholder="e.g. Business"
+        	focus-me="ingredientFormOpen">
+   		
+        <ul>
+            <li ng-repeat="entry in list">
+                {{entry}}
+            </li>
+        </ul>  
+
+        <button class="btn addTags">Add tags to profile</button>
+   	</fieldset>
+   	
+
+  </form>
+</section>
+
+
+<button ng-click="getFacebookInfo()"></button>
+
+
