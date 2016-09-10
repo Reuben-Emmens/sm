@@ -8,11 +8,12 @@
  * Controller of the sharemateWebappApp
  */
 angular.module('sharemateWebappApp')
-  .controller('SignUpModalCtrl', function ($scope, $uibModalInstance) {
+  .controller('SignUpModalCtrl', function ($scope, $uibModalInstance, Modal) {
    
 
   	$scope.close = function() {
       $uibModalInstance.dismiss('cancel');
+      Modal.openTagsModal();
     };
     
 

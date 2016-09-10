@@ -10,6 +10,7 @@
 angular.module('sharemateWebappApp')
   .controller('TagsModalCtrl', function ($scope, $uibModalInstance, data) {
     $scope.data = data;
+    $scope.myObject = {text: ''}; // Object initiated to link to child scopes of modal partials.
     
     $scope.steps = [
       { number: 1, name: 'First Step' },
@@ -33,5 +34,18 @@ angular.module('sharemateWebappApp')
       }
       $scope.currentStep = angular.copy($scope.steps[nextNumber]);
     };
+
+
+    $scope.list = [];
+    $scope.submit = function() {
+      console.log($scope.myObject.text )
+      if ($scope.myObject.text ) {
+          $scope.list.push($scope.myObject.text);
+          $scope.myObject.text = '';
+      }
+      console.log("Done.") 
+    };
+
+
     
   });

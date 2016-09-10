@@ -20,7 +20,7 @@ angular.module('sharemateWebappApp')
     }
   });
 
-  var authenticationObject = {
+  var myObject = {
 
       // This is called with the results from from FB.getLoginStatus().
       statusChangeCallback: function(response) {
@@ -133,6 +133,6 @@ angular.module('sharemateWebappApp')
           });
         } //addUserToDatabase
     } //myObject
-    return authenticationObject;
+    return myObject;
   }
   ]);

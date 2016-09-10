@@ -1,1 +1,13 @@
-wizardModalStep1.html
+<form>
+  <div class="form-group" ng-sumbit="submit()">
+     <input type="text" class="form-control" ng-model="myObject.text"  placeholder="e.g. Physics">
+
+        <pre>list={{list}}</pre>
+        <ul>
+            <li ng-repeat="entry in list">
+                {{entry}}
+            </li>
+        </ul>  
+  </div>
+  <button class="btn btn-default" ng-click="submit()">Submit</button>
+</form>

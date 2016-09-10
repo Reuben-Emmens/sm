@@ -80,3 +80,11 @@ display: block;
 .white, .white a {
   color: #fff;
 }
+
+.tags-modal h3, p {
+	text-align: center;
+}
+
+.tags-modal p {
+	color: #404040;
+}
