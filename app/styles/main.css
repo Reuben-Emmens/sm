@@ -1,6 +1,4 @@
-.modal-footer p {
-	display: inline-block;
-}
+
 
 .modal-body p small {
 	color: #777;
@@ -29,6 +27,16 @@
 .modal-footer p {
 	color: #777;
 	font-size: 1.2em;
+	display: inline-block;
+}
+
+.modal-footer a {
+	font-size: 0.8em;
+	color: #777;
+}
+
+.modal-footer a:hover {
+	text-decoration: none;
 }
 
 .modal-content {
@@ -39,6 +47,7 @@
 .modal-dialog	{
 	height:	80%;
 	height:	80%;
+	overflow-y: initial !important;
 }
 
 
@@ -70,7 +79,8 @@
 }
 
 .modal-body	{
-	height: 286px;
+	height: 218px;
+	overflow-y: auto;
 }
 
 .modal {
@@ -105,4 +115,35 @@ display: block;
 
 .tags-list li span {
 	font-weight: bold;
+}
+
+/*Email Modal*/
+
+.email-modal {
+	text-align: center;
+}
+
+.email-modal img {
+	width: 25%;
+	height: auto;
+	opacity: 0.5;
+	margin-top: -20px;
+	margin-bottom: 20px;
+}
+
+/*Welcome Modal*/
+
+
+.welcome-image {
+	z-index: -1;
+	display: block;
+ 	width: auto;
+  	max-height: 100%
+}
+
+.welcome-modal h1 {
+	color: white;
+	position: absolute;
+	left: 10px;
+	top: 10px;
 }

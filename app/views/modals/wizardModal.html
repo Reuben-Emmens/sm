@@ -1,31 +1,56 @@
+<img class="welcome-image" ng-if="currentStep.number == 3" ng-src="/images/welcome_square.jpg" alt="Welcome">
+
 <div class="modal-header tags-modal">
-  <h3>{{data.modalTitle}}</h3>
-  <p>{{data.modalSubTitle}}</p>
-</div>
+  <div ng-switch="currentStep.number">
+    <div ng-switch-when="1">
+      <h3>Add tags to your profile</h3>
+      <p>tags are used to find people with similar interests</p>
+    </div>
+    <div ng-switch-when="2">
+      <h3>Confirm your email</h3>
+      <p>We will send an email to your adress. Click the link in the email to confirm it's you.</p>
+    </div>
+    <div ng-switch-when="3">
+
+    </div>
+  </div> <!-- ng-switch -->
+</div> <!-- modal-header -->
+
 <div class="modal-body tags-modal">
   <form role="form">
     <div class="row">
       <div class="col-md-12">
 
-        <div ng-switch="currentStep.number">
+        <!-- Modal body elements are seperated into partials -->
+        <div class="tags-modal" ng-switch="currentStep.number">
           <div ng-switch-when="1">
             <ng-include src="'views/modals/wizardModalStep1.html'"></ng-include>
           </div>
-          <div ng-switch-when="2">
+          <div class="email-modal" ng-switch-when="2">
             <ng-include src="'views/modals/wizardModalStep2.html'"></ng-include>
           </div>
-          <div ng-switch-when="3">
+          <div class="welcome-modal" ng-switch-when="3">
             <ng-include src="'views/modals/wizardModalStep3.html'"></ng-include>
           </div>
-        </div>
+        </div> 
 
-      </div>
-    </div>
+      </div> <!-- column -->
+    </div> <!-- row -->
 
   </form>
 
 </div>
 <div class="modal-footer">
-  <button class="btn btn-primary" ng-click="nextStep()">Next Step</button>
-  <button class="btn btn-default" ng-click="cancel()">Close</button>
+  <div ng-switch="currentStep.number">
+    <div ng-switch-when="1">
+      <button class="btn btn-primary" ng-click="addTags(); nextStep()">Next Step</button>
+    </div>
+    <div ng-switch-when="2">
+      <a href="#">Skip now</a>
+    </div>
+    <div ng-switch-when="3">
+
+    </div>
+  </div> <!-- ng-switch -->
+
 </div>

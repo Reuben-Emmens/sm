@@ -1,1 +1,11 @@
-wizardModalStep2.html
+	<img ng-src="/images/envelope.svg" alt="Envelope" />	
+
+	<form>
+	  <div class="input-group">
+	    <input type="text" class="form-control" placeholder="e.g. Physics" value="{{user.email}}">
+	    <span class="input-group-btn">
+	      <button class="btn btn-primary" type="submit" ng-click="sendConfimationEmail(); nextStep()">Send</button>
+	    </span>
+	  </div>
+	</form>
+

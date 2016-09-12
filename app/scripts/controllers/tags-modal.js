@@ -11,7 +11,8 @@ angular.module('sharemateWebappApp')
   .controller('TagsModalCtrl', function ($scope, $uibModalInstance, data) {
     $scope.data = data;
     $scope.myObject = {text: ''}; // Object initiated to link to child scopes of modal partials.
-    
+    $scope.boolean = true;
+
     $scope.steps = [
       { number: 1, name: 'First Step' },
       { number: 2, name: 'Second Step' },
@@ -57,5 +58,13 @@ angular.module('sharemateWebappApp')
         }
     }
 
-    
+    $scope.addTags = function() {
+      // Add method.
+    }
+
+    $scope.sendConfirmationEmail = function() {
+      // Add method.
+    }
+
+      
   });
