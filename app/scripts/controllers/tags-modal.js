@@ -37,15 +37,25 @@ angular.module('sharemateWebappApp')
 
 
     $scope.list = [];
+
     $scope.submit = function() {
       console.log($scope.myObject.text )
-      if ($scope.myObject.text ) {
+      if ($scope.myObject.text && $scope.list.indexOf($scope.myObject.text) == -1) {
           $scope.list.push($scope.myObject.text);
           $scope.myObject.text = '';
+      } else {
+        $scope.message = "You already have that tag."
       }
       console.log("Done.") 
     };
 
+
+    $scope.undoIngredient = function(entry) {''
+        var index = $scope.list.indexOf(entry);
+        if (index > -1) {
+            $scope.list.splice(index, 1);
+        }
+    }
 
     
   });
