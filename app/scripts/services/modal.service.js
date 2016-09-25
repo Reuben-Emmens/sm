@@ -17,7 +17,8 @@ var myObject = {
 		var signUpModalInstance = $uibModal.open({
 			templateUrl: "views/modals/sign-up.modal.html",
 			controller: "SignUpModalCtrl", 
-      animation: false, 		  			
+      animation: false,
+      keyboard: false, 		  			
 			resolve: {
           data: function() {
             return data === null ? {} : data;
@@ -31,7 +32,8 @@ var myObject = {
       templateUrl: 'views/modals/wizardModal.html',
       controller: 'TagsModalCtrl',
       backdrop: 'static',
-      animation: false, 
+      animation: false,
+      keyboard: false,  
       resolve: {
         data: function() {
           return data === null ? {} : data;

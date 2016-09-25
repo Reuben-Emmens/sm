@@ -17,7 +17,11 @@ angular.module('sharemateWebappApp')
 
   	$scope.openTagsModal = function(data) {
         Modal.openTagsModal(data);
-      };
+    };
+
+	$scope.openWelcomeModal = function(data) {
+        Modal.openWelcomeModal(data);
+    };
 
   });
 

@@ -1,6 +1,4 @@
-<img class="welcome-image" ng-if="currentStep.number == 3" ng-src="/images/welcome_square.jpg" alt="Welcome">
-
-<div class="modal-header tags-modal">
+<div ng-hide="finalSlide" class="modal-header tags-modal">
   <div ng-switch="currentStep.number">
     <div ng-switch-when="1">
       <h3>Add tags to your profile</h3>
@@ -16,7 +14,7 @@
   </div> <!-- ng-switch -->
 </div> <!-- modal-header -->
 
-<div class="modal-body tags-modal">
+<div ng-class="{expand: finalSlide}" class="modal-body tags-modal">
   <form role="form">
     <div class="row">
       <div class="col-md-12">
@@ -40,7 +38,8 @@
   </form>
 
 </div>
-<div class="modal-footer">
+
+<div ng-hide="finalSlide" class="modal-footer">
   <div ng-switch="currentStep.number">
     <div ng-switch-when="1">
       <button class="btn btn-primary" ng-click="addTags(); nextStep()">Next Step</button>

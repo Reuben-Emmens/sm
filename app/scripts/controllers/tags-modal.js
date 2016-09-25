@@ -12,6 +12,8 @@ angular.module('sharemateWebappApp')
     $scope.data = data;
     $scope.myObject = {text: ''}; // Object initiated to link to child scopes of modal partials.
     $scope.boolean = true;
+    $scope.finalSlide = false;
+
 
     $scope.steps = [
       { number: 1, name: 'First Step' },
@@ -64,6 +66,11 @@ angular.module('sharemateWebappApp')
 
     $scope.sendConfirmationEmail = function() {
       // Add method.
+    }
+
+    $scope.finalSlideNow = function() {
+      $scope.finalSlide = true;
+      console.log("finalSlide activated.")
     }
 
       
